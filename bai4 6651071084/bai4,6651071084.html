@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MelodyVN Online - Học nhạc mọi lúc mọi nơi</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f3f4f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #1e293b;
+            color: #ffffff;
+            padding: 25px 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        header hgroup h1 {
+            font-size: 28px;
+            color: #38bdf8;
+            margin-bottom: 5px;
+        }
+
+        header hgroup h2 {
+            font-size: 16px;
+            font-weight: normal;
+            color: #cbd5e1;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        main {
+            flex: 3;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        aside {
+            flex: 1;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            height: fit-content;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            font-size: 20px;
+            color: #0f172a;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #38bdf8;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .video-wrapper {
+            margin-bottom: 15px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 640px;
+            height: auto;
+            border-radius: 8px;
+            background-color: #000;
+        }
+
+        .video-desc {
+            background-color: #f8fafc;
+            padding: 12px 15px;
+            border-left: 4px solid #38bdf8;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #475569;
+        }
+
+        .audio-item {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .audio-item p {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .loop-note {
+            font-size: 13px;
+            color: #64748b;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        aside h3 {
+            font-size: 18px;
+            color: #1e293b;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #10b981;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #cbd5e1;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        footer {
+            margin-top: 25px;
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 18px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 4px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header chứa hgroup -->
+    <header>
+        <hgroup>
+            <h1>MelodyVN Online</h1>
+            <h2>Học nhạc mọi lúc mọi nơi</h2>
+        </hgroup>
+    </header>
+
+    <div class="container">
+        <!-- Main chính -->
+        <main>
+            <!-- Section 1: Video bài học -->
+            <section>
+                <h2>Bài học: Kỹ thuật đệm hát Piano cơ bản</h2>
+                <div class="video-wrapper">
+                    <!-- Video chuẩn MP4 quay cảnh chơi đàn Piano -->
+                    <video width="640" height="360" controls poster="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=640&h=360&fit=crop" preload="auto">
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-playing-a-piano-4054-large.mp4" type="video/mp4">
+                        <p>Trình duyệt của bạn không hỗ trợ video.</p>
+                    </video>
+                </div>
+                <p class="video-desc">
+                    Nội dung bài học: Hướng dẫn thế tay chuẩn, cách xếp ngón trên phím đàn và thực hành các hợp âm Piano căn bản nhất dành cho người mới bắt đầu.
+                </p>
+            </section>
+
+            <!-- Section 2: Nghe thử -->
+            <section>
+                <h2>Nghe thử giai điệu mẫu</h2>
+
+                <!-- Bài 1: Canon in D -->
+                <div class="audio-item">
+                    <p>Bài 1: Canon in D – Piano</p>
+                    <audio controls preload="none">
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                        <p>Trình duyệt không hỗ trợ audio.</p>
+                    </audio>
+                </div>
+
+                <!-- Bài 2: Für Elise -->
+                <div class="audio-item">
+                    <p>Bài 2: Für Elise – Piano</p>
+                    <audio controls loop muted>
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                        <p>Trình duyệt không hỗ trợ audio.</p>
+                    </audio>
+                    <p class="loop-note">
+                        * Ghi chú: Thẻ audio Bài 2 sử dụng thuộc tính <code>loop</code> giúp bản nhạc tự động phát lặp đi lặp lại vô tận mà không bị ngắt quãng, thích hợp cho việc luyện nghe giai điệu mẫu.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Aside: Lịch học tuần này -->
+        <aside>
+            <h3>Lịch học tuần này</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Ngày</th>
+                        <th scope="col">Buổi học</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Thứ Hai</td>
+                        <td>Piano Cơ bản</td>
+                    </tr>
+                    <tr>
+                        <td>Thứ Tư</td>
+                        <td>Guitar Nhập môn</td>
+                    </tr>
+                    <tr>
+                        <td>Thứ Sáu</td>
+                        <td>Hợp âm Nâng cao</td>
+                    </tr>
+                    <tr>
+                        <td>Chủ Nhật</td>
+                        <td>Cảm âm & Thanh nhạc</td>
+                    </tr>
+                </tbody>
+            </table>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Trung tâm âm nhạc MelodyVN - 123 Đường Nhạc, Quận Âm</p>
+        <p>Email: info@melodyvn.com - Hotline: 1900 6789</p>
+    </footer>
+
+</body>
+</html>
