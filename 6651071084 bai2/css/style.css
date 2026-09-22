@@ -1,0 +1,363 @@
+/* ==========================================================================
+   BƯỚC 12: CHÚ THÍCH CÁC NHÓM KIẾN THỨC CSS3 ĐÃ VẬN DỤNG TRONG BÀI
+   1. Selectors (Class, ID, Pseudo-class, Attribute)
+   2. Border & Background (Border-radius, Box-shadow, Linear-gradient)
+   3. Text Effects (Text-shadow, Letter-spacing, Line-height)
+   4. 2D/3D Transform (Scale, TranslateY, Rotate)
+   5. Transitions & Animations (Keyframes, Smooth scroll, Hover ease)
+   6. Multiple Columns & Flexbox / Grid Layout
+   7. User Interface (Sticky Nav, Pill Badges, Custom Buttons)
+   ========================================================================== */
+
+/* --- 1. RESET & BASE STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Hiệu ứng cuộn mượt khi bấm Menu Navigation */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f8f9fa;
+}
+
+/* --- 2. HEADER & STICKY NAVIGATION (Nhóm 7: User Interface) --- */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    /* Nhóm 2: Background với dải màu Gradient & Box-shadow */
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo a {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    /* Nhóm 3: Text Effects - letter spacing */
+    letter-spacing: 1px;
+}
+
+.logo a span {
+    color: #00d2ff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    /* Nhóm 5: Transitions cho liên kết menu */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+}
+
+/* Nhóm 1: Pseudo-class :hover */
+.nav-links a:hover {
+    color: #00d2ff;
+    border-bottom: 2px solid #00d2ff;
+}
+
+/* --- 3. MAIN CONTAINER & HERO SECTION --- */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Layout Flexbox cho Hero (Nhóm 6: Flexbox Layout) */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0;
+    gap: 40px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    color: #1e3c72;
+    margin-bottom: 15px;
+    /* Nhóm 3: Text Effects - Text Shadow */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero-title .highlight {
+    color: #0083b0;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    color: #555555;
+    margin-bottom: 25px;
+}
+
+/* Nhóm 7: Nút bấm CTA chuẩn UI */
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    /* Nhóm 2: Border Radius tạo góc bo tròn */
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    /* Nhóm 5: Transitions hiệu ứng mượt khi rê chuột */
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background: #0083b0;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 131, 176, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #0083b0;
+    border: 2px solid #0083b0;
+}
+
+/* Nhóm 4: 2D Transform (Scale & TranslateY) khi hover nút */
+.btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-avatar img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    /* Nhóm 2: Bo tròn hình ảnh thành hình tròn hoàn chỉnh */
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    /* Nhóm 5: Transition cho ảnh đại diện */
+    transition: transform 0.4s ease;
+}
+
+.hero-avatar img:hover {
+    /* Nhóm 4: Transform Rotate & Scale */
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* --- 4. GIỚI THIỆU & KĨ NĂNG --- */
+.section-title {
+    font-size: 1.8rem;
+    color: #1e3c72;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #0083b0;
+}
+
+.about-section, .skills-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Nhóm 7: Pill Badge cho các thẻ Kỹ năng */
+.skill-badge {
+    background-color: #eef2f5;
+    color: #1e3c72;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1px solid #dcdfe3;
+    /* Nhóm 5 & 4: Transition & Transform scale nhẹ */
+    transition: all 0.2s ease;
+}
+
+.skill-badge:hover {
+    background-color: #0083b0;
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+/* --- 5. BỐ CỤC NỘI DUNG VÀ ASIDE SIDEBAR (Nhóm 6: Grid Layout) --- */
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 30px;
+}
+
+/* --- 6. DỰ ÁN NỔI BẬT (CARD GRID) --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    /* Nhóm 2: Box Shadow cho Card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    /* Nhóm 4 & 5: Nổi card lên khi Hover */
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-img img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 0.95rem;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color: #0083b0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --- 7. DÒNG THỜI GIAN (TIMELINE) --- */
+.timeline-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.timeline {
+    border-left: 3px solid #0083b0;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.timeline-item {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.timeline-date {
+    display: inline-block;
+    background: #0083b0;
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+/* --- 8. ASIDE SIDEBAR (BƯỚC 10) --- */
+.sidebar .widget {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h3 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.post-list {
+    list-style: none;
+}
+
+.post-list li {
+    margin-bottom: 12px;
+    border-bottom: 1px dashed #e0e0e0;
+    padding-bottom: 8px;
+}
+
+.post-list a {
+    color: #444444;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.post-list a:hover {
+    color: #0083b0;
+}
+
+/* --- 9. FOOTER & BACK TO TOP (BƯỚC 11) --- */
+.footer {
+    background: #1e3c72;
+    color: #ffffff;
+    padding: 25px 8%;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.back-to-top {
+    color: #00d2ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+}

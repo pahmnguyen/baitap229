@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog cá nhân giới thiệu sinh viên - Bài tập dự án">
+    <title>Blog Cá Nhân - Trọng Nguyễn</title>
+    <!-- Đường dẫn liên kết đến file CSS ở thư mục css -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- BƯỚC 4: HEADER / NAVIGATION -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="#">PN<span>.Dev</span></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#hero">Trang chủ</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#skills">Kỹ năng</a></li>
+                <li><a href="#projects">Dự án</a></li>
+                <li><a href="#timeline">Hành trình</a></li>
+                <li><a href="#blog">Bài viết</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <!-- BƯỚC 5: HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Xin chào! Tôi là <span class="highlight">Nguyễn Lê Quý Trọng</span></h1>
+                <p class="hero-desc">
+                    Sinh viên ngành Công nghệ Thông tin đam mê thiết kế Web, sáng tạo giao diện người dùng và phát triển ứng dụng Frontend.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#about" class="btn btn-primary">Xem hồ sơ</a>
+                    <a href="#contact" class="btn btn-secondary">Liên hệ tôi</a>
+                </div>
+            </div>
+            <div class="hero-avatar">
+                <img src="../images/avatar.jpg" alt="Ảnh chân dung sinh viên">
+            </div>
+        </section>
+
+        <!-- BƯỚC 6: GIỚI THIỆU BẢN THÂN -->
+        <section id="about" class="about-section">
+            <h2 class="section-title">Giới thiệu bản thân</h2>
+            <div class="about-text">
+                <p>
+                    Hiện tại, tôi đang là sinh viên năm thứ 2  ngành <strong>Công nghệ Thông Tin</strong>. Tôi luôn tò mò và thích tìm hiểu về các công nghệ web mới, đặc biệt là việc tối ưu trải nghiệm người dùng.
+                </p>
+                <p>
+                    Mục tiêu ngắn hạn của tôi là trở thành một <span class="badge-text">Frontend Developer</span> chuyên nghiệp, làm chủ các khung công tác hiện đại như ReactJS và mang lại những sản phẩm web có tính thẩm mỹ cao.
+                </p>
+            </div>
+        </section>
+
+        <!-- BƯỚC 7: KỸ NĂNG / CÔNG CỤ -->
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">Kỹ năng & Công cụ</h2>
+            <div class="skills-grid">
+                <span class="skill-badge">HTML5</span>
+                <span class="skill-badge">CSS3 / SCSS</span>
+                <span class="skill-badge">JavaScript (ES6+)</span>
+                <span class="skill-badge">Figma</span>
+                <span class="skill-badge">Git / GitHub</span>
+                <span class="skill-badge">Responsive Design</span>
+            </div>
+        </section>
+
+        <!-- KHỐI BỐ CỤC CHÍNH ĐỂ CHỨA NỘI DUNG VÀ ASIDE SIDEBAR -->
+        <div class="content-wrapper">
+            <div class="primary-content">
+                <!-- BƯỚC 8: DỰ ÁN NỔI BẬT -->
+                <section id="projects" class="projects-section">
+                    <h2 class="section-title">Dự án nổi bật</h2>
+                    <div class="projects-grid">
+                        <article class="project-card">
+                            <div class="card-img">
+                                <img src="../images/project1.jpg" alt="Trang Web Bán Hàng">
+                            </div>
+                            <div class="card-body">
+                                <h3>Trang Web Bán Cà Phê</h3>
+                                <p>Giao diện trang chủ cửa hàng cà phê tối ưu trải nghiệm đặt hàng trên thiết bị di động.</p>
+                                <a href="#" class="read-more">Xem chi tiết &rarr;</a>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="card-img">
+                                <img src="../images/project2.jpg" alt="Ứng dụng To-Do List">
+                            </div>
+                            <div class="card-body">
+                                <h3>Blog Cá Nhân Sinh Viên</h3>
+                                <p>Xây dựng trang Portfolio lưu trữ toàn bộ các bài tập thực hành thiết kế web chuẩn CSS3.</p>
+                                <a href="#" class="read-more">Xem chi tiết &rarr;</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- BƯỚC 9: HÀNH TRÌNH / DÒNG THỜI GIAN -->
+                <section id="timeline" class="timeline-section">
+                    <h2 class="section-title">Hành trình phát triển</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-date">2025</span>
+                            <h3>Nhập học Ngành CNTT</h3>
+                            <p>Bắt đầu tiếp xúc với tư duy lập trình căn bản và giải thuật.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-date">2026</span>
+                            <h3>Học Thiết Kế Web Căn Bản</h3>
+                            <p>Nắm vững cấu trúc HTML5 và tạo giao diện tĩnh đơn giản.</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- BƯỚC 10: ASIDE - BÀI VIẾT / CHIA SẺ -->
+            <aside id="blog" class="sidebar">
+                <div class="widget">
+                    <h3>Bài viết mới nhất</h3>
+                    <ul class="post-list">
+                        <li><a href="#">Mẹo học CSS Grid & Flexbox cực nhanh</a></li>
+                        <li><a href="#">Tại sao nên thiết kế Wireframe trên Figma trước khi Code?</a></li>
+                        <li><a href="#">Cách quản lý Source Code hiệu quả với Git</a></li>
+                    </ul>
+                </div>
+                <div class="widget social-widget">
+                    <h3>Mạng xã hội</h3>
+                    <div class="social-links">
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- BƯỚC 11: FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Phạm Nguyễn. Bản quyền thuộc về Dự án cá nhân Sinh viên.</p>
+            <a href="#hero" class="back-to-top">Về đầu trang &uarr;</a>
+        </div>
+    </footer>
+
+</body>
+</html>
